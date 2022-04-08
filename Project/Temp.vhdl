@@ -8,7 +8,7 @@ library ieee;
 use ieee.std_logic_1164.all;
 
 -------REGISTER-------
-entity Register is
+entity Registers is
   port(
             clock           : in std_logic;                       --Clock to update register
             enable          : in std_logic;                       --Enable to update register
@@ -26,3 +26,157 @@ entity Register is
             outputs         : out std_logic_vector (7 downto 0);  --output value to register
   );
 end entity;                                                                                                                                                                                                                                                                 --Paxton Proctor
+  
+library ieee;
+use ieee.std_logic_1164.all;
+  
+architecture intructions of Registers is
+    signal  value : std_logic_vector (7 downto 0);
+begin
+    process(clock)
+    begin
+          --STUFF--
+    end process;
+            outputs <= value;
+end intructions;
+  
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity output is
+  port(
+            a               : in std_logic_vector  (7 downto 0);
+            b               : in std_logic_vector  (7 downto 0);
+            en              : in std_logic;
+            c               : out std_logic_vector (7 downto 0)
+  );
+end entity;
+  
+library ieee;
+use ieee.std_logic_1164.all;
+  
+architecture intructions of output is
+begin
+    --Block of instructions--
+end intructions;
+  
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity loader is
+  port(
+            a               : in std_logic_vector  (7 downto 0);
+            b               : in std_logic_vector  (7 downto 0);
+            en              : in std_logic;
+            c               : out std_logic_vector (7 downto 0)
+  );
+end entity;
+  
+library ieee;
+use ieee.std_logic_1164.all;
+  
+architecture intructions of loader is
+begin
+    --Block of instructions--
+end intructions;
+
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity andentity is
+  port(
+            a               : in std_logic_vector  (7 downto 0);
+            b               : in std_logic_vector  (7 downto 0);
+            en              : in std_logic;
+            c               : out std_logic_vector (7 downto 0)
+  );
+end entity;
+  
+library ieee;
+use ieee.std_logic_1164.all;
+  
+architecture intructions of andentity is
+begin
+    --Block of instructions--
+end intructions;
+
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity subentity is
+  port(
+            a               : in std_logic_vector  (7 downto 0);
+            b               : in std_logic_vector  (7 downto 0);
+            en              : in std_logic;
+            c               : out std_logic_vector (7 downto 0)
+  );
+end entity;
+  
+library ieee;
+use ieee.std_logic_1164.all;
+  
+architecture intructions of subentity is
+begin
+    --Block of instructions--
+end intructions;  
+
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity orentity is
+  port(
+            a               : in std_logic_vector  (7 downto 0);
+            b               : in std_logic_vector  (7 downto 0);
+            en              : in std_logic;
+            c               : out std_logic_vector (7 downto 0)
+  );
+end entity;
+  
+library ieee;
+use ieee.std_logic_1164.all;
+  
+architecture intructions of orentity is
+begin
+    --Block of instructions--
+end intructions;
+  
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity addentity is
+  port(
+            a               : in std_logic_vector  (7 downto 0);
+            b               : in std_logic_vector  (7 downto 0);
+            en              : in std_logic;
+            c               : out std_logic_vector (7 downto 0)
+  );
+end entity;
+  
+library ieee;
+use ieee.std_logic_1164.all;
+  
+architecture intructions of addentity is
+begin
+    --Block of instructions--
+end intructions;
+  
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity moventity is
+  port(
+            a               : in std_logic_vector  (7 downto 0);
+            b               : in std_logic_vector  (7 downto 0);
+            en              : in std_logic;
+            c               : out std_logic_vector (7 downto 0)
+  );
+end entity;
+  
+library ieee;
+use ieee.std_logic_1164.all;
+  
+architecture intructions of moventity is
+begin
+    --Block of instructions--
+end intructions;
+ 
