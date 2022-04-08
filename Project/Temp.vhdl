@@ -24,5 +24,5 @@ entity Register is
             movinputs       : in std_logic_vector  (7 downto 0);  --holds mov value
             movenable       : in std_logic;                       --movEnable to update register
             outputs         : out std_logic_vector (7 downto 0);  --output value to register
-   );
+  );
 end entity;                                                                                                                                                                                                                                                                 --Paxton Proctor
