@@ -25,4 +25,4 @@ entity Register is
             movenable       : in std_logic;                       --movEnable to update register
             outputs         : out std_logic_vector (7 downto 0);  --output value to register
    );
-end entity;
+end entity;                                                                                                                                                                                                                                                                 --Paxton Proctor
