@@ -7,7 +7,7 @@
 library ieee;
 use ieee.std_logic_1164.all;
 
--------REGISTER-------
+-------REGISTER Entities-------
 entity Registers is
   port(
             clock           : in std_logic;                       --Clock to update register
@@ -29,12 +29,18 @@ end entity;                                                                     
   
 library ieee;
 use ieee.std_logic_1164.all;
-  
+
+-------REGISTER Architecture-------
 architecture intructions of Registers is
     signal  value : std_logic_vector (7 downto 0);
 begin
     process(clock)
     begin
+          --STUFF--
+          --STUFF--
+          --STUFF--
+          --STUFF--
+          --STUFF--
           --STUFF--
     end process;
             outputs <= value;
@@ -43,13 +49,18 @@ end intructions;
 library ieee;
 use ieee.std_logic_1164.all;
 
+-------OUTPUT-------
 entity output is
   port(
-            a               : in std_logic_vector  (7 downto 0);
-            b               : in std_logic_vector  (7 downto 0);
-            en              : in std_logic;
-            c               : out std_logic_vector (7 downto 0)
-  );
+            mainoutput       : out std_logic_vector (7 downto 0);
+            signal  R0output : std_logic_vector (7 downto 0);
+            signal  R1output : std_logic_vector (7 downto 0);
+            signal  R2output : std_logic_vector (7 downto 0);
+            signal  R3output : std_logic_vector (7 downto 0);
+            R0outputEnable   : std_logic;
+            R1outputEnable   : std_logic;
+            R2outputEnable   : std_logic;
+            R3outputEnable   : std_logic
 end entity;
   
 library ieee;
@@ -57,12 +68,31 @@ use ieee.std_logic_1164.all;
   
 architecture intructions of output is
 begin
-    --Block of instructions--
+        process (R0output, R1output, R2output, R3output)
+        begin
+                            if (R0outputEnable = '1') then
+                                  mainoutput <= R0output;
+                            elsif (R1outputEnable = '1') then
+                                  mainoutput <= R1output;
+                            elsif (R2outputEnable = '1') then
+                                  mainoutput <= R2output;
+                            elsif(R3outputEnable = '1') then
+                                  mainoutput <= R3output;
+                            elsif
+                                  mainoutput <= R2output;
+                            elsif
+                                  mainoutput <= R1output;
+                            else
+                                  mainoutput <= R2output;
+                            end if;
+        end process;
+        end;
 end intructions;
   
 library ieee;
 use ieee.std_logic_1164.all;
 
+--------LOADER--------
 entity loader is
   port(
             a               : in std_logic_vector  (7 downto 0);
