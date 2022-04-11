@@ -36,12 +36,26 @@ architecture intructions of Registers is
 begin
     process(clock)
     begin
-          --STUFF--
-          --STUFF--
-          --STUFF--
-          --STUFF--
-          --STUFF--
-          --STUFF--
+            if (falling_edge(clock)) then
+                    if(enable = '1') then
+                            value <= inputs;
+                    end if;
+                    if(andenable = '1') then
+                            value <= andinputs;
+                    end if;
+                    if(subenable = '1') then
+                            value <= subinputs;
+                    end if;
+                    if(orenable = '1') then
+                            value <= orinputs;
+                    end if;
+                    if(addenable = '1') then
+                            value <= addinputs;
+                    end if;
+                    if(movenable = '1') then
+                            value <= movinputs;
+                    end if;
+            end if;
     end process;
             outputs <= value;
 end intructions;
@@ -95,10 +109,12 @@ use ieee.std_logic_1164.all;
 --------LOADER--------
 entity loader is
   port(
-            a               : in std_logic_vector  (7 downto 0);
-            b               : in std_logic_vector  (7 downto 0);
-            en              : in std_logic;
-            c               : out std_logic_vector (7 downto 0)
+            signal  R0loadEnable : std_logic;
+            signal  R1loadEnable : std_logic;
+            signal  R2loadEnable : std_logic;
+            signal  R3loadEnable : std_logic;
+            load                 : out std_logic_vector(7 downto 0);
+            signal command       : std_logic_vector(15 downto 0)
   );
 end entity;
   
@@ -107,7 +123,10 @@ use ieee.std_logic_1164.all;
   
 architecture intructions of loader is
 begin
-    --Block of instructions--
+        process(R0loadEnable, R1loadEnable, R2loadEnable, R3loadEnable, command)
+        begin
+                --IFSTATEMENT--
+        end process;
 end intructions;
 
 library ieee;
