@@ -36,7 +36,7 @@ architecture intructions of Registers is
 begin
     process(clock)
     begin
-            if (falling_edge(clock)) then
+            if (rising_edge(clock)) then
                     if(enable = '1') then
                             value <= inputs;
                     end if;
@@ -75,6 +75,7 @@ entity output is
             R1outputEnable   : std_logic;
             R2outputEnable   : std_logic;
             R3outputEnable   : std_logic
+  );
 end entity;
   
 library ieee;
@@ -97,7 +98,7 @@ begin
                             elsif
                                   mainoutput <= R1output;
                             else
-                                  mainoutput <= R2output;
+                                  mainoutput <= R0output;
                             end if;
         end process;
         end;
